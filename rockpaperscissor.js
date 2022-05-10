@@ -1,55 +1,45 @@
-
-const playerOneHand = ["rock","paper", "scissor"]
 const playerTwoHand = ["rock","paper", "scissor"]
+const playerSelection = "rock";
 
+function computerPlay(min) {
 
-                      
-const buttonRock = playerOneHand[0]
+return min[Math.floor(Math.random() * min.length)];
 
-const buttonPaper = playerOneHand[1]
-
-const buttonScissor = playerOneHand[2]
-
-
-const randomHandPlayerOne = playerOneHand [Math.floor(Math.random() * playerOneHand.length)];
-const randomHandPlayerTwo = playerTwoHand [Math.floor(Math.random() * playerTwoHand.length)];  //picks a random string from an array
-
-//source  https://www.codegrepper.com/code-examples/javascript/javascript+pick+random+string+from+array%5D
-
-
-console.log(randomHandPlayerOne)
-console.log(randomHandPlayerTwo)
-
-
-if (randomHandPlayerOne === randomHandPlayerTwo) {
-    console.log("Draw!")       
-} else if ( randomHandPlayerOne === "rock" && randomHandPlayerTwo ==="paper") {
- console.log("Paper wins!")
-
-} else if ( randomHandPlayerOne === "rock" && randomHandPlayerTwo ==="scissor") {
-    console.log("Rock Wins!")
-
-   } else if ( randomHandPlayerOne === "paper" && randomHandPlayerTwo ==="scissor") {
-    console.log("Scissor wins!")
-
-   } else if ( randomHandPlayerOne === "paper" && randomHandPlayerTwo ==="rock") {
-    console.log("Paper wins!")
-
-   } else if ( randomHandPlayerOne === "scissor" && randomHandPlayerTwo ==="paper") {                        
-    console.log("scissor wins!")
-
-   } else if ( randomHandPlayerOne === "scissor" && randomHandPlayerTwo ==="rock") {
-    console.log("rock wins!")
-   }
-
-              
-                                                                 
-                                             
-                       
+}
 
             
-       
+console.log(computerPlay(playerTwoHand)) 
+console.log(playerSelection)
 
+function playRound(playerSelection, computerSelection) {
+
+
+    if (playerSelection === computerSelection) {
+        console.log("Draw!")       
+    } else if ( playerSelection === "rock" && computerSelection ==="paper") {
+     console.log("Paper wins!")
+    
+    } else if ( playerSelection === "rock" && computerSelection ==="scissor") {
+        console.log("Rock Wins!")
+    
+       } else if ( playerSelection === "paper" && computerSelection ==="scissor") {
+        console.log("Scissor wins!")
+    
+       } else if ( playerSelection === "paper" && computerSelection ==="rock") {
+        console.log("Paper wins!")
+    
+       } else if ( playerSelection === "scissor" && computerSelection ==="paper") {                        
+        console.log("scissor wins!")
+    
+       } else if ( playerSelection === "scissor" && computerSelection ==="rock") {
+        console.log("rock wins!")
+       }
+            
+}
+
+playRound(playerSelection, computerPlay(playerTwoHand))
+
+                                                                             
 
 
                                                    
