@@ -1,10 +1,10 @@
 const playerTwoHand = ["rock","paper", "scissor"]
 const playerSelection = "rock";
-let playerIsAlive = ["♥️","♥️","♥️","♥️","♥️", false]
+let playerIsAlive = ["♥️","♥️","♥️","♥️","♥️", false]     // health bars if player or computer loses it triggers a shift .shift until it reaches the false boolean that triggers an else statement
 let computerIsAlive = ["♥️","♥️","♥️","♥️","♥️",false]
 
 function computerPlay(min) {
-return min[Math.floor(Math.random() * min.length)];
+return min[Math.floor(Math.random() * min.length)];     // generates a random number that picks the (string) hand within the array
 }         
 
 console.log(computerPlay(playerTwoHand)) 
@@ -12,10 +12,8 @@ console.log(playerSelection)
 
 function playRound(playerSelection, computerSelection) {
 
-
     if (playerIsAlive[0] && computerIsAlive[0]) {
 
-   
          if (playerSelection === computerSelection) {
               console.log("Draw!")       
           } else if ( playerSelection === "rock" && computerSelection ==="paper") {
@@ -40,7 +38,7 @@ function playRound(playerSelection, computerSelection) {
                 
              } else if ( playerSelection === "scissor" && computerSelection ==="rock") {
               console.log("rock wins!")
-              playerIsAlive.shift("♥️")
+              playerIsAlive.shift("♥️") 
             }                   
             
     } else if (computerIsAlive[0] === false) {
@@ -48,23 +46,9 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerIsAlive[0] === false  ) {
         console.log ("You Lose!")
     }              
-
+                            
     console.log(playerIsAlive)
     console.log(computerIsAlive)
-
-}                                                  
+}                                                                
                        
 playRound(playerSelection, computerPlay(playerTwoHand))
-
-
-
-    
-                                                                             
-
-
-                                                   
-                                                                  
-
-       
-
-
