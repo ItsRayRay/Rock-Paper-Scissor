@@ -38,7 +38,7 @@ a {
         0 0 151px #0fa;
   }
   
-.neonTextFooter {
+#neonTextFooter {
     color: #fff;
     text-shadow:
         0 0 7px #fff,
@@ -50,6 +50,7 @@ a {
         0 0 102px #0fa,
         0 0 151px #0fa;
         font-size: 2em;
+        margin-top: 100px;
 }
   
   
@@ -61,7 +62,7 @@ a {
     
   
   
-  .computerhand {
+  #pchand {
       font-size: 8em;
   }
 
@@ -214,87 +215,13 @@ a {
 
 
 
-
-
-#heart {
-    position: relative;
-    width: 100px;
-    height: 90px;
-    animation: heartbeat 2s infinite;
-    margin:0 auto
+#heart5, #heart4, #heart3, #heart2, #heart1,
+#heartpc5, #heartpc4, #heartpc3, #heartpc2, #heartpc1  {
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
 }
-#heart:before,
-#heart:after {
-    position: absolute;
-    content: "";
-    left: 50px;
-    top: 0;
-    width: 50px;
-    height: 80px;
-    background: red;
-    -moz-border-radius: 50px 50px 0 0;
-    border-radius: 50px 50px 0 0;
-    -webkit-transform: rotate(-45deg);
-       -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-         -o-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    -webkit-transform-origin: 0 100%;
-       -moz-transform-origin: 0 100%;
-        -ms-transform-origin: 0 100%;
-         -o-transform-origin: 0 100%;
-            transform-origin: 0 100%;
-}
-#heart:after {
-    left: 0;
-    -webkit-transform: rotate(45deg);
-       -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-         -o-transform: rotate(45deg);
-            transform: rotate(45deg);
-    -webkit-transform-origin: 100% 100%;
-       -moz-transform-origin: 100% 100%;
-        -ms-transform-origin: 100% 100%;
-         -o-transform-origin: 100% 100%;
-            transform-origin :100% 100%;
-}
-
-
-
-@keyframes heartbeat
-{
-  0%
-  {
-    transform: scale( .75 );
-  }
-  20%
-  {
-    transform: scale( 1 );
-  }
-  40%
-  {
-    transform: scale( .75 );
-  }
-  60%
-  {
-    transform: scale( 1 );
-  }
-  80%
-  {
-    transform: scale( .75 );
-  }
-  100%
-  {
-    transform: scale( .75 );
-  }
-}
-
-
-
-
-
-
-
 
 
 
