@@ -17,7 +17,8 @@ const heart1Pc = document.getElementById("heartpc1")
 
 
 const neonFooter = document.getElementById("neonTextFooter")
-const pcHand = document.getElementById("pchand")
+const resetButton = document.getElementById("reset-button")
+const pcHand = document.getElementById("pchand") // the generated icon from machine hand
 
 
 let playerIsAlive = [5,4,3,2,1, false]     
@@ -26,14 +27,14 @@ let computerIsAlive = [5,4,3,2,1,false]
 
 
 function computerPlay(min) {
-return min[Math.floor(Math.random() * min.length)];     // generates a ra number that picks the (string) hand within the array
+return min[Math.floor(Math.random() * min.length)];     // generates a random number that picks the (string) hand within the array
 }                    
 
-console.log(computerPlay(playerTwoHand)) 
-console.log(playerSelection)   
+
+//=======================================================//==========================================================//
 
 
-
+//this sections contains all the buttons
 
 const rockButton = document.getElementById("rock-button")
 rockButton.addEventListener('click', () => {
@@ -56,8 +57,13 @@ ScissorsButton.addEventListener('click', () => {
   playRound("scissor", computerPlay(playerTwoHand))
   
   })
+
+  //=======================================================//==========================================================//
   
-  
+
+
+//function starts here
+
 
 function playRound(playerSelection, computerSelection) {
 
@@ -100,12 +106,19 @@ function playRound(playerSelection, computerSelection) {
               playerIsAlive.shift() 
               pcHand.textContent = "🪨"
               neonFooter.textContent ="Rock Wins!"
+
+
             }                   
             
     } else if (computerIsAlive[0] === false) {
-        console.log("You Win!")
+      neonFooter.textContent ="You Win!"
+      resetButton.innerHTML = `<button onClick="window.location.reload();">Play again?</button> `
+
     } else if (playerIsAlive[0] === false  ) {
-        console.log ("You Lose!")
+      neonFooter.textContent ="You Lose!"
+      resetButton.innerHTML = `<button onClick="window.location.reload();">Play again?</button> `
+
+
     }              
 
 
@@ -170,19 +183,8 @@ function playRound(playerSelection, computerSelection) {
            
     
 
-
-    console.log(playerIsAlive)
-    console.log(computerIsAlive)
 }                                                         
 
 
 
                        
-playRound(playerSelection, computerPlay(playerTwoHand))
-
-
-
-
-
-
-                                                
