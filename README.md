@@ -5,3 +5,5 @@ This is my very first project created using JavaScript. I learned about using co
 In this game, the player can choose between rock, paper, or scissors and compete against the computer. The winner is determined based on the traditional rules of rock paper scissors.
 
 I had a lot of fun working on this project and it was a great way to start learning JavaScript. Feel free to check out the code and give it a try!
+
+https://itsrayray.github.io/Rock-Paper-Scissor/
